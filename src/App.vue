@@ -1,10 +1,18 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
+  <Navigation msg="Welcome to Your Vue.js + TypeScript App" />
   <router-view />
 </template>
+<script lang="ts">
+import { Options, Vue } from "vue-class-component";
+import Navigation from "@/components/Navigation.vue";
+
+@Options({
+  components: {
+    Navigation,
+  },
+})
+export default class App extends Vue {}
+</script>
 
 <style>
 #app {
